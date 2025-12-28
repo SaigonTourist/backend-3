@@ -1,0 +1,26 @@
+### 1. Test - Verificar que el servidor funciona
+GET http://localhost:8080/
+
+### 2. Test - Obtener mascotas mockeadas (100 mascotas falsas)
+GET http://localhost:8080/api/mocks/mockingpets
+
+### 3. Test - Obtener usuarios mockeados (50 usuarios por defecto)
+GET http://localhost:8080/api/mocks/mockingusers
+
+### 4. Test - Obtener usuarios mockeados con cantidad personalizada
+GET http://localhost:8080/api/mocks/mockingusers?quantity=5
+
+### 5. Test - Generar e insertar datos en la BD
+POST http://localhost:8080/api/mocks/generateData
+Content-Type: application/json
+
+{
+  "users": 3,
+  "pets": 5
+}
+
+### 6. Test - Verificar usuarios insertados en la BD
+GET http://localhost:8080/api/users
+
+### 7. Test - Verificar mascotas insertadas en la BD
+GET http://localhost:8080/api/pets
