@@ -24,3 +24,30 @@ GET http://localhost:8080/api/users
 
 ### 7. Test - Verificar mascotas insertadas en la BD
 GET http://localhost:8080/api/pets
+
+### 8. Test - Obtener todas las adopciones
+GET http://localhost:8080/api/adoptions
+
+### 9. Test - Crear una adopción (necesitas IDs reales)
+# Primero obtén IDs reales de users y pets con los endpoints 6 y 7
+POST http://localhost:8080/api/adoptions/USER_ID_AQUI/PET_ID_AQUI
+Content-Type: application/json
+
+{
+  "notes": "Primera adopción de prueba"
+}
+
+### 10. Test - Obtener adopción específica por ID
+GET http://localhost:8080/api/adoptions/ADOPTION_ID_AQUI
+
+### 11. Test - Actualizar estado de adopción
+PUT http://localhost:8080/api/adoptions/ADOPTION_ID_AQUI
+Content-Type: application/json
+
+{
+  "status": "approved",
+  "notes": "Adopción aprobada"
+}
+
+### 12. Test - Eliminar adopción
+DELETE http://localhost:8080/api/adoptions/ADOPTION_ID_AQUI
